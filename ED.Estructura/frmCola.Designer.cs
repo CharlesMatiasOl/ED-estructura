@@ -1,6 +1,6 @@
 ﻿namespace ED.Estructura
 {
-    partial class frmPila
+    partial class frmCola
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.mrcListayGrilla = new System.Windows.Forms.GroupBox();
-            this.dgvPila = new System.Windows.Forms.DataGridView();
+            this.dgvCola = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lstListaPila = new System.Windows.Forms.ListBox();
+            this.lstLista = new System.Windows.Forms.ListBox();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.cmdEliminar = new System.Windows.Forms.Button();
             this.lblTramiteEE = new System.Windows.Forms.Label();
             this.lblNombreEE = new System.Windows.Forms.Label();
             this.lblCodigoEE = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             this.lblNombreE = new System.Windows.Forms.Label();
             this.lblCodigoE = new System.Windows.Forms.Label();
             this.mrcNuevoElemento = new System.Windows.Forms.GroupBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtTramiteN = new System.Windows.Forms.TextBox();
+            this.cmdAgregar = new System.Windows.Forms.Button();
+            this.txtElementoN = new System.Windows.Forms.TextBox();
             this.txtNombreN = new System.Windows.Forms.TextBox();
             this.txtCodigoN = new System.Windows.Forms.TextBox();
             this.lblTramiteN = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.lblCodigoN = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mrcListayGrilla.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevoElemento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,26 +60,26 @@
             // 
             // mrcListayGrilla
             // 
-            this.mrcListayGrilla.Controls.Add(this.dgvPila);
-            this.mrcListayGrilla.Controls.Add(this.lstListaPila);
-            this.mrcListayGrilla.Location = new System.Drawing.Point(22, 218);
+            this.mrcListayGrilla.Controls.Add(this.dgvCola);
+            this.mrcListayGrilla.Controls.Add(this.lstLista);
+            this.mrcListayGrilla.Location = new System.Drawing.Point(17, 215);
             this.mrcListayGrilla.Name = "mrcListayGrilla";
-            this.mrcListayGrilla.Size = new System.Drawing.Size(606, 196);
-            this.mrcListayGrilla.TabIndex = 11;
+            this.mrcListayGrilla.Size = new System.Drawing.Size(635, 184);
+            this.mrcListayGrilla.TabIndex = 4;
             this.mrcListayGrilla.TabStop = false;
             this.mrcListayGrilla.Text = "Listado en una grilla y lista";
             // 
-            // dgvPila
+            // dgvCola
             // 
-            this.dgvPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvPila.Location = new System.Drawing.Point(238, 22);
-            this.dgvPila.Name = "dgvPila";
-            this.dgvPila.Size = new System.Drawing.Size(344, 154);
-            this.dgvPila.TabIndex = 1;
+            this.dgvCola.Location = new System.Drawing.Point(257, 13);
+            this.dgvCola.Name = "dgvCola";
+            this.dgvCola.Size = new System.Drawing.Size(344, 154);
+            this.dgvCola.TabIndex = 1;
             // 
             // Column1
             // 
@@ -99,38 +99,38 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // lstListaPila
+            // lstLista
             // 
-            this.lstListaPila.FormattingEnabled = true;
-            this.lstListaPila.Location = new System.Drawing.Point(6, 16);
-            this.lstListaPila.Name = "lstListaPila";
-            this.lstListaPila.Size = new System.Drawing.Size(182, 160);
-            this.lstListaPila.TabIndex = 0;
+            this.lstLista.FormattingEnabled = true;
+            this.lstLista.Location = new System.Drawing.Point(7, 20);
+            this.lstLista.Name = "lstLista";
+            this.lstLista.Size = new System.Drawing.Size(182, 147);
+            this.lstLista.TabIndex = 0;
             // 
             // mrcElementoEliminado
             // 
-            this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
+            this.mrcElementoEliminado.Controls.Add(this.cmdEliminar);
             this.mrcElementoEliminado.Controls.Add(this.lblTramiteEE);
             this.mrcElementoEliminado.Controls.Add(this.lblNombreEE);
             this.mrcElementoEliminado.Controls.Add(this.lblCodigoEE);
             this.mrcElementoEliminado.Controls.Add(this.lblTramiteE);
             this.mrcElementoEliminado.Controls.Add(this.lblNombreE);
             this.mrcElementoEliminado.Controls.Add(this.lblCodigoE);
-            this.mrcElementoEliminado.Location = new System.Drawing.Point(438, 39);
+            this.mrcElementoEliminado.Location = new System.Drawing.Point(452, 33);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
-            this.mrcElementoEliminado.Size = new System.Drawing.Size(190, 150);
-            this.mrcElementoEliminado.TabIndex = 10;
+            this.mrcElementoEliminado.Size = new System.Drawing.Size(200, 140);
+            this.mrcElementoEliminado.TabIndex = 3;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento Eliminado";
             // 
-            // btnEliminar
+            // cmdEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(9, 111);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(157, 23);
-            this.btnEliminar.TabIndex = 7;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Location = new System.Drawing.Point(9, 111);
+            this.cmdEliminar.Name = "cmdEliminar";
+            this.cmdEliminar.Size = new System.Drawing.Size(157, 23);
+            this.cmdEliminar.TabIndex = 7;
+            this.cmdEliminar.Text = "Eliminar";
+            this.cmdEliminar.UseVisualStyleBackColor = true;
             // 
             // lblTramiteEE
             // 
@@ -185,35 +185,35 @@
             // 
             // mrcNuevoElemento
             // 
-            this.mrcNuevoElemento.Controls.Add(this.btnAgregar);
-            this.mrcNuevoElemento.Controls.Add(this.txtTramiteN);
+            this.mrcNuevoElemento.Controls.Add(this.cmdAgregar);
+            this.mrcNuevoElemento.Controls.Add(this.txtElementoN);
             this.mrcNuevoElemento.Controls.Add(this.txtNombreN);
             this.mrcNuevoElemento.Controls.Add(this.txtCodigoN);
             this.mrcNuevoElemento.Controls.Add(this.lblTramiteN);
             this.mrcNuevoElemento.Controls.Add(this.lblNombreN);
             this.mrcNuevoElemento.Controls.Add(this.lblCodigoN);
-            this.mrcNuevoElemento.Location = new System.Drawing.Point(223, 39);
+            this.mrcNuevoElemento.Location = new System.Drawing.Point(235, 33);
             this.mrcNuevoElemento.Name = "mrcNuevoElemento";
-            this.mrcNuevoElemento.Size = new System.Drawing.Size(188, 150);
-            this.mrcNuevoElemento.TabIndex = 9;
+            this.mrcNuevoElemento.Size = new System.Drawing.Size(200, 140);
+            this.mrcNuevoElemento.TabIndex = 2;
             this.mrcNuevoElemento.TabStop = false;
             this.mrcNuevoElemento.Text = "Nuevo Elemento";
             // 
-            // btnAgregar
+            // cmdAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(10, 111);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(157, 23);
-            this.btnAgregar.TabIndex = 6;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Location = new System.Drawing.Point(10, 111);
+            this.cmdAgregar.Name = "cmdAgregar";
+            this.cmdAgregar.Size = new System.Drawing.Size(157, 23);
+            this.cmdAgregar.TabIndex = 6;
+            this.cmdAgregar.Text = "Agregar";
+            this.cmdAgregar.UseVisualStyleBackColor = true;
             // 
-            // txtTramiteN
+            // txtElementoN
             // 
-            this.txtTramiteN.Location = new System.Drawing.Point(64, 77);
-            this.txtTramiteN.Name = "txtTramiteN";
-            this.txtTramiteN.Size = new System.Drawing.Size(100, 20);
-            this.txtTramiteN.TabIndex = 5;
+            this.txtElementoN.Location = new System.Drawing.Point(64, 77);
+            this.txtElementoN.Name = "txtElementoN";
+            this.txtElementoN.Size = new System.Drawing.Size(100, 20);
+            this.txtElementoN.TabIndex = 5;
             // 
             // txtNombreN
             // 
@@ -258,27 +258,27 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ED.Estructura.Properties.Resources.aaa;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 22);
+            this.pictureBox1.Image = global::ED.Estructura.Properties.Resources.Cola_svg;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(195, 177);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // frmPila
+            // frmCola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 443);
+            this.ClientSize = new System.Drawing.Size(679, 421);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mrcListayGrilla);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevoElemento);
-            this.Name = "frmPila";
-            this.Text = "Estructura-Pila";
+            this.Name = "frmCola";
+            this.Text = "frmCola";
             this.mrcListayGrilla.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);
             this.mrcElementoEliminado.PerformLayout();
             this.mrcNuevoElemento.ResumeLayout(false);
@@ -291,13 +291,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox mrcListayGrilla;
-        private System.Windows.Forms.DataGridView dgvPila;
+        private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ListBox lstListaPila;
+        private System.Windows.Forms.ListBox lstLista;
         private System.Windows.Forms.GroupBox mrcElementoEliminado;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button cmdEliminar;
         private System.Windows.Forms.Label lblTramiteEE;
         private System.Windows.Forms.Label lblNombreEE;
         private System.Windows.Forms.Label lblCodigoEE;
@@ -305,8 +305,8 @@
         private System.Windows.Forms.Label lblNombreE;
         private System.Windows.Forms.Label lblCodigoE;
         private System.Windows.Forms.GroupBox mrcNuevoElemento;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtTramiteN;
+        private System.Windows.Forms.Button cmdAgregar;
+        private System.Windows.Forms.TextBox txtElementoN;
         private System.Windows.Forms.TextBox txtNombreN;
         private System.Windows.Forms.TextBox txtCodigoN;
         private System.Windows.Forms.Label lblTramiteN;

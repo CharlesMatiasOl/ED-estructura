@@ -21,5 +21,45 @@ namespace ED.Estructura
         {
 
         }
+
+        private void sistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sistema objVentana = new Sistema();
+            objVentana.ShowDialog();
+        }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila objVentanaPila = new frmPila();
+            objVentanaPila.ShowDialog();
+        }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCola objVentanaPila = new frmCola();
+            objVentanaPila.ShowDialog();
+        }
+
+        private void listaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void liToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple objVentanaPila = new frmListaSimple();
+            objVentanaPila.ShowDialog();
+        }
+
+        private void doblesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble objVentanaPila = new frmListaDoble();
+            objVentanaPila.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
