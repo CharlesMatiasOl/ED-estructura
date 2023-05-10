@@ -32,9 +32,11 @@
             this.optDescendente = new System.Windows.Forms.RadioButton();
             this.optAscendente = new System.Windows.Forms.RadioButton();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.lstCodigo = new System.Windows.Forms.ComboBox();
             this.lblCodigoE = new System.Windows.Forms.Label();
             this.mrcNuevoElemento = new System.Windows.Forms.GroupBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.txtTramiteN = new System.Windows.Forms.TextBox();
             this.txtNombreN = new System.Windows.Forms.TextBox();
             this.txtCodigoN = new System.Windows.Forms.TextBox();
@@ -42,13 +44,11 @@
             this.lblNombreN = new System.Windows.Forms.Label();
             this.lblCodigoN = new System.Windows.Forms.Label();
             this.mrcListado = new System.Windows.Forms.GroupBox();
-            this.lstListado = new System.Windows.Forms.ListBox();
+            this.lstListaDoble = new System.Windows.Forms.ListBox();
             this.dgvListaDoble = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mrcListar.SuspendLayout();
             this.mrcElementoEliminado.SuspendLayout();
@@ -63,9 +63,9 @@
             this.mrcListar.Controls.Add(this.optDescendente);
             this.mrcListar.Controls.Add(this.optAscendente);
             this.mrcListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mrcListar.Location = new System.Drawing.Point(590, 149);
+            this.mrcListar.Location = new System.Drawing.Point(581, 129);
             this.mrcListar.Name = "mrcListar";
-            this.mrcListar.Size = new System.Drawing.Size(149, 74);
+            this.mrcListar.Size = new System.Drawing.Size(149, 69);
             this.mrcListar.TabIndex = 51;
             this.mrcListar.TabStop = false;
             this.mrcListar.Text = "Listar Datos";
@@ -81,6 +81,7 @@
             this.optDescendente.TabStop = true;
             this.optDescendente.Text = "Descendente";
             this.optDescendente.UseVisualStyleBackColor = true;
+            this.optDescendente.CheckedChanged += new System.EventHandler(this.optDescendente_CheckedChanged);
             // 
             // optAscendente
             // 
@@ -93,6 +94,7 @@
             this.optAscendente.TabStop = true;
             this.optAscendente.Text = "Ascendente";
             this.optAscendente.UseVisualStyleBackColor = true;
+            this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
             // 
             // mrcElementoEliminado
             // 
@@ -100,12 +102,22 @@
             this.mrcElementoEliminado.Controls.Add(this.lstCodigo);
             this.mrcElementoEliminado.Controls.Add(this.lblCodigoE);
             this.mrcElementoEliminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mrcElementoEliminado.Location = new System.Drawing.Point(561, 49);
+            this.mrcElementoEliminado.Location = new System.Drawing.Point(552, 29);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
-            this.mrcElementoEliminado.Size = new System.Drawing.Size(219, 94);
+            this.mrcElementoEliminado.Size = new System.Drawing.Size(219, 89);
             this.mrcElementoEliminado.TabIndex = 50;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento eliminado";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(81, 56);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(121, 23);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lstCodigo
             // 
@@ -136,12 +148,22 @@
             this.mrcNuevoElemento.Controls.Add(this.lblNombreN);
             this.mrcNuevoElemento.Controls.Add(this.lblCodigoN);
             this.mrcNuevoElemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mrcNuevoElemento.Location = new System.Drawing.Point(321, 45);
+            this.mrcNuevoElemento.Location = new System.Drawing.Point(312, 25);
             this.mrcNuevoElemento.Name = "mrcNuevoElemento";
-            this.mrcNuevoElemento.Size = new System.Drawing.Size(209, 156);
+            this.mrcNuevoElemento.Size = new System.Drawing.Size(209, 151);
             this.mrcNuevoElemento.TabIndex = 49;
             this.mrcNuevoElemento.TabStop = false;
             this.mrcNuevoElemento.Text = "Nuevo elemento";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(84, 116);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(100, 23);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramiteN
             // 
@@ -193,23 +215,23 @@
             // 
             // mrcListado
             // 
-            this.mrcListado.Controls.Add(this.lstListado);
+            this.mrcListado.Controls.Add(this.lstListaDoble);
             this.mrcListado.Controls.Add(this.dgvListaDoble);
             this.mrcListado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mrcListado.Location = new System.Drawing.Point(28, 229);
+            this.mrcListado.Location = new System.Drawing.Point(19, 209);
             this.mrcListado.Name = "mrcListado";
-            this.mrcListado.Size = new System.Drawing.Size(752, 196);
+            this.mrcListado.Size = new System.Drawing.Size(752, 191);
             this.mrcListado.TabIndex = 48;
             this.mrcListado.TabStop = false;
             this.mrcListado.Text = "Listado en una lista y una grilla";
             // 
-            // lstListado
+            // lstListaDoble
             // 
-            this.lstListado.FormattingEnabled = true;
-            this.lstListado.Location = new System.Drawing.Point(16, 30);
-            this.lstListado.Name = "lstListado";
-            this.lstListado.Size = new System.Drawing.Size(222, 134);
-            this.lstListado.TabIndex = 1;
+            this.lstListaDoble.FormattingEnabled = true;
+            this.lstListaDoble.Location = new System.Drawing.Point(16, 30);
+            this.lstListaDoble.Name = "lstListaDoble";
+            this.lstListaDoble.Size = new System.Drawing.Size(222, 134);
+            this.lstListaDoble.TabIndex = 1;
             // 
             // dgvListaDoble
             // 
@@ -238,30 +260,12 @@
             this.Tramite.HeaderText = "Tramite";
             this.Tramite.Name = "Tramite";
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(84, 116);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(100, 23);
-            this.btnAgregar.TabIndex = 7;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(81, 56);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(121, 23);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ED.Estructura.Properties.Resources.images__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(264, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(264, 151);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
@@ -270,7 +274,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 561);
+            this.ClientSize = new System.Drawing.Size(789, 415);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mrcListar);
             this.Controls.Add(this.mrcElementoEliminado);
@@ -278,6 +282,7 @@
             this.Controls.Add(this.mrcListado);
             this.Name = "frmListaDoble";
             this.Text = "frmListaDoble";
+            this.Load += new System.EventHandler(this.frmListaDoble_Load);
             this.mrcListar.ResumeLayout(false);
             this.mrcListar.PerformLayout();
             this.mrcElementoEliminado.ResumeLayout(false);
@@ -307,7 +312,7 @@
         private System.Windows.Forms.Label lblNombreN;
         private System.Windows.Forms.Label lblCodigoN;
         private System.Windows.Forms.GroupBox mrcListado;
-        private System.Windows.Forms.ListBox lstListado;
+        private System.Windows.Forms.ListBox lstListaDoble;
         private System.Windows.Forms.DataGridView dgvListaDoble;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;

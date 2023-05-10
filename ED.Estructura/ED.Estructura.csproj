@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsListaDoble.cs" />
+    <Compile Include="clsArbol.cs" />
+    <Compile Include="clsCola.cs" />
+    <Compile Include="clsListaSimple.cs" />
+    <Compile Include="clsNodo.cs" />
+    <Compile Include="clsPila.cs" />
+    <Compile Include="frmArbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArbol.Designer.cs">
+      <DependentUpon>frmArbol.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCola.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -131,6 +131,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblTramiteEE
             // 
@@ -207,6 +208,7 @@
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramiteN
             // 
@@ -277,6 +279,7 @@
             this.Controls.Add(this.mrcNuevoElemento);
             this.Name = "frmPila";
             this.Text = "Estructura-Pila";
+            this.Load += new System.EventHandler(this.frmPila_Load);
             this.mrcListayGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);

@@ -33,7 +33,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lstLista = new System.Windows.Forms.ListBox();
+            this.lstListaCola = new System.Windows.Forms.ListBox();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.lblTramiteEE = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.lblCodigoE = new System.Windows.Forms.Label();
             this.mrcNuevoElemento = new System.Windows.Forms.GroupBox();
             this.cmdAgregar = new System.Windows.Forms.Button();
-            this.txtElementoN = new System.Windows.Forms.TextBox();
+            this.txtTramiteN = new System.Windows.Forms.TextBox();
             this.txtNombreN = new System.Windows.Forms.TextBox();
             this.txtCodigoN = new System.Windows.Forms.TextBox();
             this.lblTramiteN = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             // mrcListayGrilla
             // 
             this.mrcListayGrilla.Controls.Add(this.dgvCola);
-            this.mrcListayGrilla.Controls.Add(this.lstLista);
+            this.mrcListayGrilla.Controls.Add(this.lstListaCola);
             this.mrcListayGrilla.Location = new System.Drawing.Point(17, 215);
             this.mrcListayGrilla.Name = "mrcListayGrilla";
             this.mrcListayGrilla.Size = new System.Drawing.Size(635, 184);
@@ -99,13 +99,13 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // lstLista
+            // lstListaCola
             // 
-            this.lstLista.FormattingEnabled = true;
-            this.lstLista.Location = new System.Drawing.Point(7, 20);
-            this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(182, 147);
-            this.lstLista.TabIndex = 0;
+            this.lstListaCola.FormattingEnabled = true;
+            this.lstListaCola.Location = new System.Drawing.Point(7, 20);
+            this.lstListaCola.Name = "lstListaCola";
+            this.lstListaCola.Size = new System.Drawing.Size(182, 147);
+            this.lstListaCola.TabIndex = 0;
             // 
             // mrcElementoEliminado
             // 
@@ -131,6 +131,7 @@
             this.cmdEliminar.TabIndex = 7;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // lblTramiteEE
             // 
@@ -186,7 +187,7 @@
             // mrcNuevoElemento
             // 
             this.mrcNuevoElemento.Controls.Add(this.cmdAgregar);
-            this.mrcNuevoElemento.Controls.Add(this.txtElementoN);
+            this.mrcNuevoElemento.Controls.Add(this.txtTramiteN);
             this.mrcNuevoElemento.Controls.Add(this.txtNombreN);
             this.mrcNuevoElemento.Controls.Add(this.txtCodigoN);
             this.mrcNuevoElemento.Controls.Add(this.lblTramiteN);
@@ -207,13 +208,14 @@
             this.cmdAgregar.TabIndex = 6;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
-            // txtElementoN
+            // txtTramiteN
             // 
-            this.txtElementoN.Location = new System.Drawing.Point(64, 77);
-            this.txtElementoN.Name = "txtElementoN";
-            this.txtElementoN.Size = new System.Drawing.Size(100, 20);
-            this.txtElementoN.TabIndex = 5;
+            this.txtTramiteN.Location = new System.Drawing.Point(64, 77);
+            this.txtTramiteN.Name = "txtTramiteN";
+            this.txtTramiteN.Size = new System.Drawing.Size(100, 20);
+            this.txtTramiteN.TabIndex = 5;
             // 
             // txtNombreN
             // 
@@ -277,6 +279,7 @@
             this.Controls.Add(this.mrcNuevoElemento);
             this.Name = "frmCola";
             this.Text = "frmCola";
+            this.Load += new System.EventHandler(this.frmCola_Load);
             this.mrcListayGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
             this.mrcElementoEliminado.ResumeLayout(false);
@@ -295,7 +298,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ListBox lstLista;
+        private System.Windows.Forms.ListBox lstListaCola;
         private System.Windows.Forms.GroupBox mrcElementoEliminado;
         private System.Windows.Forms.Button cmdEliminar;
         private System.Windows.Forms.Label lblTramiteEE;
@@ -306,7 +309,7 @@
         private System.Windows.Forms.Label lblCodigoE;
         private System.Windows.Forms.GroupBox mrcNuevoElemento;
         private System.Windows.Forms.Button cmdAgregar;
-        private System.Windows.Forms.TextBox txtElementoN;
+        private System.Windows.Forms.TextBox txtTramiteN;
         private System.Windows.Forms.TextBox txtNombreN;
         private System.Windows.Forms.TextBox txtCodigoN;
         private System.Windows.Forms.Label lblTramiteN;
