@@ -96,6 +96,9 @@
     <Compile Include="Sistema.Designer.cs">
       <DependentUpon>Sistema.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmArbol.resx">
+      <DependentUpon>frmArbol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1dfa3593014672bc0a17065a2604b228.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

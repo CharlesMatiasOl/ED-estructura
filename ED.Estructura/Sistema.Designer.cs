@@ -46,9 +46,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(106, 170);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(261, 20);
+            this.label8.Size = new System.Drawing.Size(154, 20);
             this.label8.TabIndex = 27;
-            this.label8.Text = "DE OLIVEIRA, MATIAS CHARLES";
+            this.label8.Text = "CHARLES MATIAS ";
             // 
             // label7
             // 
