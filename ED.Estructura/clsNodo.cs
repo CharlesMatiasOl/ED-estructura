@@ -17,7 +17,7 @@ namespace ED.Estructura
         private clsNodo sig;
         private clsNodo Ant;
 
-        
+        //propiedades estrutura 
         public Int32 Codigo
         {
             get { return Codi; }
@@ -49,18 +49,5 @@ namespace ED.Estructura
         }
 
         
-
-        //Propiedades Arbol Binario
-        public clsNodo Izquierdo
-        {
-            get { return Ant; }
-            set { Ant = value; }
-        }
-
-        public clsNodo Derecho
-        {
-            get { return sig; }
-            set { sig = value; }
-        }
     }
 }

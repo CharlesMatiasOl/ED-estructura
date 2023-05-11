@@ -12,35 +12,36 @@ namespace ED.Estructura
         public clsNodo Primero;
         public clsNodo Ultimo;
 
-        public void Agregar(clsNodo Nuevo) //recibe un nuevo nodo
+        public void Agregar(clsNodo Nuevo) // en cola se borra el primero en entrar
+
         {
-            if (Primero == null) 
+            if (Primero == null) //si primero es nulo los dos quedan con el mismo valor ingresado 
             {
                 Primero = Nuevo;
                 Ultimo = Nuevo;
             }
             else
             {
-                Ultimo.Siguiente = Nuevo;
+                Ultimo.Siguiente = Nuevo;//El ultimo.siguiente toma el valor de nuevo y el ultimo toma el valor nuevo 
                 Ultimo = Nuevo;
             }
         }
         public void Eliminar()
         {
-            if (Primero == Ultimo)
+            if (Primero == Ultimo) //si primero es igual a ultimo lo dos quedan con valor nulo
             {
                 Primero = null;
                 Ultimo = null;
             }
             else
             {
-                Primero = Primero.Siguiente;
+                Primero = Primero.Siguiente;//primero toma el valor del numero eliminado
             }
         }
         public void Recorrer(DataGridView Grilla)
         {
-            clsNodo aux = Primero;
-            Grilla.Rows.Clear();
+            clsNodo aux = Primero;//definimos el primero 
+            Grilla.Rows.Clear();//limpiamos 
             while (aux != null)
             {
                 Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);

@@ -16,13 +16,12 @@ namespace ED.Estructura
         
         public void Agregar(clsNodo Nuevo)
         {
-            if (Primero == null)//Verifica si primero es nulo, en caso 
-                                //de serlo, le asigna el valor ingresado
+            if (Primero == null)//Si primero es nulo, en caso le asigna el valor ingresado
+                                
             {
                 Primero = Nuevo;
             }
-            else//Si ya existe un valor, hacemos que Nuevo.Siguiente tome el valor
-                //de primero, y primero tome el valor ingresado
+            else//aca hacemos que el nuevo tome el valor del primero 
             {
                 Nuevo.Siguiente = Primero;
                 Primero = Nuevo;
@@ -35,11 +34,10 @@ namespace ED.Estructura
 
         public void Eliminar()
         {
-            if (Primero != null)//Verifica que primero sea diferente de nulo
-                                //y lo borra
+            if (Primero != null)//Si primero es diferente de nulo lo apaga
+                                
             {
-                Primero = Primero.Siguiente;//Primero toma el valor del siguiente
-                                            //es decir primero.siguiente
+                Primero = Primero.Siguiente;
             }
         }
 
@@ -47,8 +45,9 @@ namespace ED.Estructura
 
         public void Recorrer(DataGridView dgvGrilla)
         {
-            clsNodo Aux = Primero;//Utilizo un puntero para definir el primero
-            dgvGrilla.Rows.Clear();//Limpiamos las columnas
+            clsNodo Aux = Primero;//para definir el primero
+            dgvGrilla.Rows.Clear();//Limpiar la grilla
+
 
             while (Aux != null)
             {
@@ -59,8 +58,8 @@ namespace ED.Estructura
 
         public void Recorrer(ListBox lstListado)
         {
-            clsNodo Aux = Primero;//Utilizo un puntero para definir el primero
-            lstListado.Items.Clear();//Limpiamos los items del list
+            clsNodo Aux = Primero;//definir el primero
+            lstListado.Items.Clear();//Limpiar la lista 
             while (Aux != null)
             {
                 lstListado.Items.Add(Aux.Codigo + " , " + Aux.Nombre + " , " + Aux.Tramite);
@@ -70,8 +69,8 @@ namespace ED.Estructura
 
         public void Recorrer(ComboBox Combo)
         {
-            clsNodo Aux = Primero;//Utilizo un puntero para definir el primero
-            Combo.Items.Clear();//Limpiamos los items del combo
+            clsNodo Aux = Primero;// definir el primero
+            Combo.Items.Clear();//Limpiar el combo
 
             while (Aux != null)
             {

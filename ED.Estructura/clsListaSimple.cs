@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ED.Estructura
 {
-    internal class clsListaSimple
+    internal class clsListaSimple//Se elimina el valor que el usuario quiere 
     {
 
         public clsNodo Primero;
@@ -15,22 +15,22 @@ namespace ED.Estructura
        
         public void Agregar(clsNodo Nuevo)
         {
-            if (Primero == null)//Verifica si primero es nulo, en caso 
-                                //de serlo, le asigna el valor ingresado
+            if (Primero == null)//Si primero es nulo pone el valor ingresado
+                                
             {
                 Primero = Nuevo;
             }
             else
             {
-                if (Nuevo.Codigo < Primero.Codigo)//Si el valor nuevo es menor que el primero
+                if (Nuevo.Codigo < Primero.Codigo)
                 {
                     Nuevo.Siguiente = Primero;
                     Primero = Nuevo;
                 }
                 else
                 {
-                    clsNodo aux = Primero;//Puntero Guia
-                    clsNodo Ant = Primero;//Toma el valor anterior del puntero AUX
+                    clsNodo aux = Primero;
+                    clsNodo Ant = Primero;
 
                     while (Nuevo.Codigo > aux.Codigo)
                     {
@@ -58,8 +58,8 @@ namespace ED.Estructura
             }
             else
             {
-                clsNodo aux = Primero;//Puntero Guia
-                clsNodo Ant = Primero;//Toma el valor anterior del puntero AUX
+                clsNodo aux = Primero;
+                clsNodo Ant = Primero;
 
                 while (aux.Codigo != Codigo)
                 {
@@ -77,7 +77,7 @@ namespace ED.Estructura
         }
 
 
-        public void Recorrer(DataGridView dgvGrilla)
+        public void Recorrer(DataGridView dgvGrilla)//procedimientos para cargar los datos
         {
             clsNodo Aux = Primero;
             dgvGrilla.Rows.Clear();

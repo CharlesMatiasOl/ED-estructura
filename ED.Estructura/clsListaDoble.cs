@@ -12,7 +12,7 @@ namespace ED.Estructura
         private clsNodo pri;
         private clsNodo ult;
 
-        //declaro las dos propiedas
+        //Las propiedades
 
         public clsNodo Primero
         {
@@ -137,7 +137,7 @@ namespace ED.Estructura
         }
         public void Eliminar(Int32 Codigo)
         {
-            //si el dato que borro es el unico de la lista 
+            
 
             if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
@@ -146,7 +146,7 @@ namespace ED.Estructura
             }
             else
             {
-                //si el codigo que quiero borrar es el PRIMERO
+                
                 if (Primero.Codigo == Codigo)
                 {
                     Primero = Primero.Siguiente;
@@ -154,7 +154,7 @@ namespace ED.Estructura
                 }
                 else
                 {
-                    //si el codigo que quiero borrar es el ULTIMO
+                 
                     if (Ultimo.Codigo == Codigo)
                     {
                         Ultimo = Ultimo.Anterior;
@@ -162,10 +162,10 @@ namespace ED.Estructura
                     }
                     else
                     {
-                        //borramos el INTERMEDIO
+                        
                         clsNodo Aux = Primero;
                         clsNodo Ant = Primero;
-                        while (Aux.Codigo < Codigo)//busqueda secuencial
+                        while (Aux.Codigo < Codigo)
                         {
                             Ant = Aux;
                             Aux = Aux.Siguiente;
