@@ -93,6 +93,16 @@ namespace ED.Estructura.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap afda39bf3a0e450e527cdc2f4ab2e7a6 {
+            get {
+                object obj = ResourceManager.GetObject("afda39bf3a0e450e527cdc2f4ab2e7a6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cola_svg {
             get {
                 object obj = ResourceManager.GetObject("Cola.svg", resourceCulture);
