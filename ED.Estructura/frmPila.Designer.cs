@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPila));
             this.mrcListayGrilla = new System.Windows.Forms.GroupBox();
             this.dgvPila = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -277,6 +278,7 @@
             this.Controls.Add(this.mrcListayGrilla);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevoElemento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPila";
             this.Text = "Estructura-Pila";
             this.Load += new System.EventHandler(this.frmPila_Load);

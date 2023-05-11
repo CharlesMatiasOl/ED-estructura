@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaDoble));
             this.mrcListar = new System.Windows.Forms.GroupBox();
             this.optDescendente = new System.Windows.Forms.RadioButton();
             this.optAscendente = new System.Windows.Forms.RadioButton();
@@ -280,6 +281,7 @@
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevoElemento);
             this.Controls.Add(this.mrcListado);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaDoble";
             this.Text = "frmListaDoble";
             this.Load += new System.EventHandler(this.frmListaDoble_Load);

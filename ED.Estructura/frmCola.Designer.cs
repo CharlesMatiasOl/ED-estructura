@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCola));
             this.mrcListayGrilla = new System.Windows.Forms.GroupBox();
             this.dgvCola = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -277,6 +278,7 @@
             this.Controls.Add(this.mrcListayGrilla);
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevoElemento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCola";
             this.Text = "frmCola";
             this.Load += new System.EventHandler(this.frmCola_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaSimple));
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lstCodigo = new System.Windows.Forms.ComboBox();
@@ -237,6 +238,7 @@
             this.Controls.Add(this.mrcElementoEliminado);
             this.Controls.Add(this.mrcNuevoElemento);
             this.Controls.Add(this.mrcListado);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaSimple";
             this.Text = "frmListaSimple";
             this.Load += new System.EventHandler(this.frmListaSimple_Load);
