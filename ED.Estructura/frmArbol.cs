@@ -16,5 +16,58 @@ namespace ED.Estructura
         {
             InitializeComponent();
         }
+       
+        private void frmArbol_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
+        private void optInOrden_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void mrcLista_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void optPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void optDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
     }
 }
+
+
+

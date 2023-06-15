@@ -38,6 +38,11 @@
             this.liToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.noLineasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.arbolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operacionConBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.repasoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -50,10 +55,11 @@
             this.sistemaToolStripMenuItem,
             this.linealesToolStripMenuItem,
             this.noLineasToolStripMenuItem,
+            this.baseDeDatosToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(385, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(435, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -114,9 +120,49 @@
             // 
             // noLineasToolStripMenuItem
             // 
+            this.noLineasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.arbolToolStripMenuItem});
             this.noLineasToolStripMenuItem.Name = "noLineasToolStripMenuItem";
             this.noLineasToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.noLineasToolStripMenuItem.Text = "No lineales";
+            // 
+            // arbolToolStripMenuItem
+            // 
+            this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
+            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolToolStripMenuItem.Text = "Arbol";
+            this.arbolToolStripMenuItem.Click += new System.EventHandler(this.arbolToolStripMenuItem_Click);
+            // 
+            // baseDeDatosToolStripMenuItem
+            // 
+            this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.operacionConBaseToolStripMenuItem,
+            this.consultaToolStripMenuItem,
+            this.repasoToolStripMenuItem});
+            this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
+            this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.baseDeDatosToolStripMenuItem.Text = "Base de Datos";
+            // 
+            // operacionConBaseToolStripMenuItem
+            // 
+            this.operacionConBaseToolStripMenuItem.Name = "operacionConBaseToolStripMenuItem";
+            this.operacionConBaseToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.operacionConBaseToolStripMenuItem.Text = "Operacion con Base ";
+            this.operacionConBaseToolStripMenuItem.Click += new System.EventHandler(this.operacionConBaseToolStripMenuItem_Click);
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.consultaToolStripMenuItem.Text = "Consulta ";
+            this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
+            // 
+            // repasoToolStripMenuItem
+            // 
+            this.repasoToolStripMenuItem.Name = "repasoToolStripMenuItem";
+            this.repasoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.repasoToolStripMenuItem.Text = "Repaso";
+            this.repasoToolStripMenuItem.Click += new System.EventHandler(this.repasoToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -131,7 +177,7 @@
             this.pictureBox1.Image = global::ED.Estructura.Properties.Resources.afda39bf3a0e450e527cdc2f4ab2e7a6;
             this.pictureBox1.Location = new System.Drawing.Point(0, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(385, 379);
+            this.pictureBox1.Size = new System.Drawing.Size(435, 379);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -140,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 403);
+            this.ClientSize = new System.Drawing.Size(435, 403);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -168,6 +214,11 @@
         private System.Windows.Forms.ToolStripMenuItem noLineasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem arbolToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem operacionConBaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem repasoToolStripMenuItem;
     }
 }
 

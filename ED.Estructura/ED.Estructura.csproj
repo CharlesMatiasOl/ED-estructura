@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBaseDeDato.cs" />
     <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsArbol.cs" />
     <Compile Include="clsCola.cs" />
@@ -58,11 +59,23 @@
     <Compile Include="frmArbol.Designer.cs">
       <DependentUpon>frmArbol.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBaseDato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDato.Designer.cs">
+      <DependentUpon>frmBaseDato.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCola.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaBase.Designer.cs">
+      <DependentUpon>frmConsultaBase.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaDoble.cs">
       <SubType>Form</SubType>
@@ -82,6 +95,12 @@
     <Compile Include="frmPila.Designer.cs">
       <DependentUpon>frmPila.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRepasoBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepasoBase.Designer.cs">
+      <DependentUpon>frmRepasoBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,8 +118,14 @@
     <EmbeddedResource Include="frmArbol.resx">
       <DependentUpon>frmArbol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDato.resx">
+      <DependentUpon>frmBaseDato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaBase.resx">
+      <DependentUpon>frmConsultaBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaDoble.resx">
       <DependentUpon>frmListaDoble.cs</DependentUpon>
@@ -110,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepasoBase.resx">
+      <DependentUpon>frmRepasoBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

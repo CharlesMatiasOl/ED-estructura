@@ -61,5 +61,29 @@ namespace ED.Estructura
         {
             this.Close();
         }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbol objVentanaPila = new frmArbol();
+            objVentanaPila.ShowDialog();
+        }
+
+        private void operacionConBaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDato objVentanaPila = new frmBaseDato();
+            objVentanaPila.ShowDialog();
+        }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBase objVentanaPila = new frmConsultaBase();
+            objVentanaPila.ShowDialog();
+        }
+
+        private void repasoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRepasoBase objVentanaPila = new frmRepasoBase();
+            objVentanaPila.ShowDialog();
+        }
     }
 }
