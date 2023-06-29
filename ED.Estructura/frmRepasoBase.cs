@@ -30,21 +30,21 @@ namespace ED.Estructura
             String varSql = "SELECT * FROM LIBRO";
             switch (cbConsulta.SelectedIndex)
             {
-                //diferencia
+                
                 case 0:
                     lblRepaso.Text = cbConsulta.Text + ":       "
                         + "Idiomas que no tienen libros ";
                     varSql = "Select * from idioma where " +
-                        "Ididioma not in " + "(Select IdIdioma from Libro) ";
+                        "Ididioma not in " + "(Select IdIdioma from Libro) ";//diferencia
                     Base.Listar(dgRepasoBase, varSql);
                     break;
-                //Interseccion
+                
                 case 1:
                     lblRepaso.Text = cbConsulta.Text + ":             " +
                         "Idiomas que si tienen libros ";
                     varSql = "Select * From Idioma where " +
                         " IdIdioma in " +
-                        " (Select IdIdioma from Libro) ";
+                        " (Select IdIdioma from Libro) ";//Interseccion
                     Base.Listar(dgRepasoBase, varSql);
                     break;
                 case 2:
@@ -62,46 +62,46 @@ namespace ED.Estructura
                     varSql = "Select Nombre From Autor";
                     Base.Listar(dgRepasoBase, varSql);
                     break;
-                case 4: //Proyeccion multiatributo
+                case 4: 
                     lblRepaso.Text = cbConsulta.Text + ":" +
                         "Muestra Pais, Titulo y Cantidad";
-                    varSql = "Select IdPais, Titulo, Cantidad from Libro";
+                    varSql = "Select IdPais, Titulo, Cantidad from Libro";//Proyeccion multiatributo
                     Base.Listar(dgRepasoBase, varSql);
                     break;
-                case 5://seleccion con and
+                case 5:
                     lblRepaso.Text = cbConsulta.Text + ":" +
-                        "Muestra todos los libros Alemanes con su precio ";
+                        "Muestra todos los libros Alemanes con su precio ";//seleccion 
                     varSql = "Select * from Libro " +
                         "where IdPais =  5 AND Precio ";
                     Base.Listar(dgRepasoBase, varSql);
                     break;
-                case 6://Seleccion multiatributo con operador OR
+                case 6:
                     lblRepaso.Text = cbConsulta.Text + ":" +
-                     "Muestra todos los libros que su autor sea Carlos o Virginia ";
+                     "Muestra todos los libros que su autor sea Carlos o Virginia ";//Seleccion multiatributo 
                     varSql = "Select * from Libro " +
                         "where IdAutor = 2 OR IdAutor = 3 ";
                     Base.Listar(dgRepasoBase, varSql);
 
                     break;
 
-                case 7://Seleccion multiatributo por convolucion
+                case 7:
                     lblRepaso.Text = cbConsulta.Text + ":" +
-                     "Muestra los libros de Alemania con cantidad mayor que 2 ";
+                     "Muestra los libros de Alemania con cantidad mayor que 2 ";//Seleccion multiatributo 
                     varSql = "Select * From " +
                         "(Select  Titulo, Cantidad, IdPais, IdIdioma From Libro where Cantidad > 2) as X " +
                         "Where IdIdioma = 3 ";
                     Base.Listar(dgRepasoBase, varSql);
                     break;
-                case 8://seleccion simple
+                case 8:
                     lblRepaso.Text = cbConsulta.Text + ":" +
-                    "Muestra los libros con cantidad mayor que 5 ";
+                    "Muestra los libros con cantidad mayor que 5 ";//seleccion simple
                     varSql = "Select Titulo from Libro " +
                         "where Cantidad > 5 ";
                     Base.Listar(dgRepasoBase, varSql);
                     break;
-                case 9: //union
+                case 9: 
                     lblRepaso.Text = cbConsulta.Text + ":" +
-                        "Muestra los libros con Idoma  Hebreo y Noruego";
+                        "Muestra los libros con Idoma  Hebreo y Noruego";//union
                     varSql = "Select * From Libro " +
                         " where IdIdioma = 18 " +
                         "union " +

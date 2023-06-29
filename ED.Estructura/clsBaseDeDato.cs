@@ -11,9 +11,9 @@ namespace ED.Estructura
 {
     internal class clsBaseDeDato
     {
-        private OleDbConnection conexion = new OleDbConnection();
-        private OleDbCommand comando = new OleDbCommand();
-        private OleDbDataAdapter adaptador = new OleDbDataAdapter();
+        private OleDbConnection conexion = new OleDbConnection();//Establece la conexion con la base de datos
+        private OleDbCommand comando = new OleDbCommand();//Ordena comandos
+        private OleDbDataAdapter adaptador = new OleDbDataAdapter();//Adapta los datos 
 
         private string cadena = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source = Libreria.mdb";
 
@@ -21,16 +21,16 @@ namespace ED.Estructura
         {
             try
             {
-                conexion.ConnectionString = cadena;
+                conexion.ConnectionString = cadena;//abrir la conexion
                 conexion.Open();
                
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.TableDirect;
-                comando.CommandText = "Libro";
+                comando.CommandText = "Libro";//nombre de la tabla 
 
-                adaptador = new OleDbDataAdapter(comando);
+                adaptador = new OleDbDataAdapter(comando);//adptar los datos 
                 DataSet DS = new DataSet();
-                adaptador.Fill(DS, "Libro");
+                adaptador.Fill(DS, "Libro");//lleno con datos de la tabla 
 
                 grilla.DataSource = null;
                 grilla.DataSource = DS.Tables["Libro"];

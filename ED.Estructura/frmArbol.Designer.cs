@@ -43,6 +43,7 @@
             this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optInOrden = new System.Windows.Forms.RadioButton();
             this.mrcElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.btnEqulibrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lstCodigo = new System.Windows.Forms.ComboBox();
             this.lblCodigoEE = new System.Windows.Forms.Label();
@@ -55,12 +56,14 @@
             this.lblNombreN = new System.Windows.Forms.Label();
             this.lblCodigoN = new System.Windows.Forms.Label();
             this.PTArbol = new System.Windows.Forms.TreeView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mrcListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgGrillaArbol)).BeginInit();
             this.mrcOrden.SuspendLayout();
             this.mrcLista.SuspendLayout();
             this.mrcElementoEliminado.SuspendLayout();
             this.mrcNuevoElemento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mrcListado
@@ -69,9 +72,9 @@
             this.mrcListado.Controls.Add(this.dgGrillaArbol);
             this.mrcListado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcListado.ForeColor = System.Drawing.Color.Black;
-            this.mrcListado.Location = new System.Drawing.Point(38, 396);
+            this.mrcListado.Location = new System.Drawing.Point(265, 396);
             this.mrcListado.Name = "mrcListado";
-            this.mrcListado.Size = new System.Drawing.Size(653, 196);
+            this.mrcListado.Size = new System.Drawing.Size(596, 194);
             this.mrcListado.TabIndex = 53;
             this.mrcListado.TabStop = false;
             this.mrcListado.Text = "Listado en una lista y una grilla";
@@ -79,7 +82,7 @@
             // lstListarArbol
             // 
             this.lstListarArbol.FormattingEnabled = true;
-            this.lstListarArbol.Location = new System.Drawing.Point(20, 30);
+            this.lstListarArbol.Location = new System.Drawing.Point(6, 30);
             this.lstListarArbol.Name = "lstListarArbol";
             this.lstListarArbol.Size = new System.Drawing.Size(222, 134);
             this.lstListarArbol.TabIndex = 1;
@@ -91,9 +94,9 @@
             this.Codigo,
             this.Nombre,
             this.Tramite});
-            this.dgGrillaArbol.Location = new System.Drawing.Point(286, 30);
+            this.dgGrillaArbol.Location = new System.Drawing.Point(244, 30);
             this.dgGrillaArbol.Name = "dgGrillaArbol";
-            this.dgGrillaArbol.Size = new System.Drawing.Size(344, 139);
+            this.dgGrillaArbol.Size = new System.Drawing.Size(345, 139);
             this.dgGrillaArbol.TabIndex = 0;
             // 
             // Codigo
@@ -118,9 +121,9 @@
             this.mrcOrden.Enabled = false;
             this.mrcOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcOrden.ForeColor = System.Drawing.Color.Black;
-            this.mrcOrden.Location = new System.Drawing.Point(557, 255);
+            this.mrcOrden.Location = new System.Drawing.Point(551, 259);
             this.mrcOrden.Name = "mrcOrden";
-            this.mrcOrden.Size = new System.Drawing.Size(134, 118);
+            this.mrcOrden.Size = new System.Drawing.Size(135, 116);
             this.mrcOrden.TabIndex = 61;
             this.mrcOrden.TabStop = false;
             this.mrcOrden.Text = "Orden";
@@ -156,9 +159,9 @@
             this.mrcLista.Controls.Add(this.optInOrden);
             this.mrcLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcLista.ForeColor = System.Drawing.Color.Black;
-            this.mrcLista.Location = new System.Drawing.Point(557, 27);
+            this.mrcLista.Location = new System.Drawing.Point(551, 31);
             this.mrcLista.Name = "mrcLista";
-            this.mrcLista.Size = new System.Drawing.Size(134, 218);
+            this.mrcLista.Size = new System.Drawing.Size(135, 216);
             this.mrcLista.TabIndex = 60;
             this.mrcLista.TabStop = false;
             this.mrcLista.Text = "Lista";
@@ -202,23 +205,35 @@
             // 
             // mrcElementoEliminado
             // 
+            this.mrcElementoEliminado.Controls.Add(this.btnEqulibrar);
             this.mrcElementoEliminado.Controls.Add(this.btnEliminar);
             this.mrcElementoEliminado.Controls.Add(this.lstCodigo);
             this.mrcElementoEliminado.Controls.Add(this.lblCodigoEE);
             this.mrcElementoEliminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcElementoEliminado.ForeColor = System.Drawing.Color.Black;
-            this.mrcElementoEliminado.Location = new System.Drawing.Point(280, 255);
+            this.mrcElementoEliminado.Location = new System.Drawing.Point(265, 259);
             this.mrcElementoEliminado.Name = "mrcElementoEliminado";
-            this.mrcElementoEliminado.Size = new System.Drawing.Size(248, 118);
+            this.mrcElementoEliminado.Size = new System.Drawing.Size(249, 116);
             this.mrcElementoEliminado.TabIndex = 59;
             this.mrcElementoEliminado.TabStop = false;
             this.mrcElementoEliminado.Text = "Elemento eliminado";
+            this.mrcElementoEliminado.Enter += new System.EventHandler(this.mrcElementoEliminado_Enter);
+            // 
+            // btnEqulibrar
+            // 
+            this.btnEqulibrar.Location = new System.Drawing.Point(32, 69);
+            this.btnEqulibrar.Name = "btnEqulibrar";
+            this.btnEqulibrar.Size = new System.Drawing.Size(86, 23);
+            this.btnEqulibrar.TabIndex = 5;
+            this.btnEqulibrar.Text = "Equilibrar";
+            this.btnEqulibrar.UseVisualStyleBackColor = true;
+            this.btnEqulibrar.Click += new System.EventHandler(this.btnEqulibrar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(107, 69);
+            this.btnEliminar.Location = new System.Drawing.Point(141, 69);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(116, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(82, 23);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -233,6 +248,7 @@
             this.lstCodigo.Name = "lstCodigo";
             this.lstCodigo.Size = new System.Drawing.Size(116, 21);
             this.lstCodigo.TabIndex = 3;
+            this.lstCodigo.SelectedIndexChanged += new System.EventHandler(this.lstCodigo_SelectedIndexChanged);
             // 
             // lblCodigoEE
             // 
@@ -254,9 +270,9 @@
             this.mrcNuevoElemento.Controls.Add(this.lblCodigoN);
             this.mrcNuevoElemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcNuevoElemento.ForeColor = System.Drawing.Color.Black;
-            this.mrcNuevoElemento.Location = new System.Drawing.Point(280, 27);
+            this.mrcNuevoElemento.Location = new System.Drawing.Point(265, 31);
             this.mrcNuevoElemento.Name = "mrcNuevoElemento";
-            this.mrcNuevoElemento.Size = new System.Drawing.Size(248, 218);
+            this.mrcNuevoElemento.Size = new System.Drawing.Size(249, 216);
             this.mrcNuevoElemento.TabIndex = 58;
             this.mrcNuevoElemento.TabStop = false;
             this.mrcNuevoElemento.Text = "Nuevo elemento";
@@ -277,6 +293,7 @@
             this.txtTramiteN.Name = "txtTramiteN";
             this.txtTramiteN.Size = new System.Drawing.Size(100, 20);
             this.txtTramiteN.TabIndex = 2;
+            this.txtTramiteN.TextChanged += new System.EventHandler(this.txtTramiteN_TextChanged);
             // 
             // txtNombreN
             // 
@@ -284,6 +301,7 @@
             this.txtNombreN.Name = "txtNombreN";
             this.txtNombreN.Size = new System.Drawing.Size(100, 20);
             this.txtNombreN.TabIndex = 1;
+            this.txtNombreN.TextChanged += new System.EventHandler(this.txtNombreN_TextChanged);
             // 
             // txtCodigoN
             // 
@@ -291,6 +309,7 @@
             this.txtCodigoN.Name = "txtCodigoN";
             this.txtCodigoN.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoN.TabIndex = 0;
+            this.txtCodigoN.TextChanged += new System.EventHandler(this.txtCodigoN_TextChanged);
             // 
             // lblTramiteN
             // 
@@ -321,16 +340,27 @@
             // 
             // PTArbol
             // 
-            this.PTArbol.Location = new System.Drawing.Point(38, 27);
+            this.PTArbol.Location = new System.Drawing.Point(28, 198);
             this.PTArbol.Name = "PTArbol";
-            this.PTArbol.Size = new System.Drawing.Size(222, 346);
+            this.PTArbol.Size = new System.Drawing.Size(219, 392);
             this.PTArbol.TabIndex = 62;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ED.Estructura.Properties.Resources.png_transparent_computer_science_tree_traversal_binary_tree_binary_search_tree_binary_number_system_angle_white_text;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(219, 161);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 63;
+            this.pictureBox1.TabStop = false;
             // 
             // frmArbol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 624);
+            this.ClientSize = new System.Drawing.Size(878, 606);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PTArbol);
             this.Controls.Add(this.mrcOrden);
             this.Controls.Add(this.mrcListado);
@@ -351,6 +381,7 @@
             this.mrcElementoEliminado.PerformLayout();
             this.mrcNuevoElemento.ResumeLayout(false);
             this.mrcNuevoElemento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,5 +414,7 @@
         private System.Windows.Forms.Label lblNombreN;
         private System.Windows.Forms.Label lblCodigoN;
         private System.Windows.Forms.TreeView PTArbol;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnEqulibrar;
     }
 }

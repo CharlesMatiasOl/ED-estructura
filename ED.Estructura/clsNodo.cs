@@ -48,16 +48,17 @@ namespace ED.Estructura
             set { sig = value; }
         }
 
-        public clsNodo Izquierdo
+        public clsNodo Izquierda
         {
             get { return Ant; }
             set { Ant = value; }
         }
 
-        public clsNodo Derecho
+        public clsNodo Derecha
         {
             get { return sig; }
             set { sig = value; }
         }
+
     }
 }

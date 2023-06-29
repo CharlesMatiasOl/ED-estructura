@@ -143,6 +143,17 @@ namespace ED.Estructura.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_computer_science_tree_traversal_binary_tree_binary_search_tree_binary_number_system_angle_white_text {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-computer-science-tree-traversal-binary-tree-binary-search-tree-bi" +
+                        "nary-number-system-angle-white-text", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Representación_de_una_pila {
             get {
                 object obj = ResourceManager.GetObject("Representación+de+una+pila", resourceCulture);
